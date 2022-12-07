@@ -13,15 +13,14 @@ import styles from './Note.module.scss'
 // }
 
 export default function Note(props: any) {
-    console.log(props)
-
+    const reg = "/\#\w+/g"
     const [editMode, setEditMode] = useState(false)
     const [text, setNote] = useState(props.data ? props.data.text : '')
     const [title, setTitle] = useState(props.data ? props.data.title : '')
     const tags: Array<String> = [] 
 
     const result = text   ? (text.split(' ').map((t: any) => {
-                        const regex = new RegExp(/\#\w+/g)
+                        const regex = new RegExp(reg)
                         if (regex.test(t)) {
                             t = <span className={styles.tag}>{t} </span>
                             tags.push(t.props.children[0])
