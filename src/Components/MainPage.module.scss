@@ -1,0 +1,33 @@
+.main {
+    background-color: rgba(255, 255, 255, 0.575);
+    height: 100vh;
+    padding: 10px;
+    .notes_list {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    }
+    h2 {
+        color: rgb(255, 0, 0);
+        text-align: center;
+    }
+    button {
+        background-color: rgb(255, 0, 0);
+        border: none;
+        border-radius: 4px;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    .button {
+        margin: 10px;
+    }
+    .list {
+        text-align: center;
+        .form input {
+            background-color: rgb(248, 240, 229);
+        }
+        h2 {
+            color: rgb(255, 0, 0);
+        }
+    }
+}
